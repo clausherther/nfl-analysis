@@ -1,0 +1,8 @@
+.DS_Store
+*.pem
+*.pyc
+# *.csv
+**/.ipynb_checkpoints
+*.gl
+*.gz
+*.zip

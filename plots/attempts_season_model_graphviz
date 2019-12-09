@@ -1,0 +1,17 @@
+digraph {
+	phi [label="phi ~ Beta"]
+	kappa_log [label="kappa_log ~ Exponential"]
+	kappa [label="kappa ~ Deterministic" shape=box]
+	subgraph cluster11 {
+		theta [label="theta ~ Beta"]
+		label=11 labeljust=r labelloc=b style=rounded
+	}
+	subgraph "cluster5,438" {
+		y [label="y ~ Poisson" style=filled]
+		label="5,438" labeljust=r labelloc=b style=rounded
+	}
+	kappa_log -> kappa
+	phi -> theta
+	kappa -> theta
+	theta -> y
+}
