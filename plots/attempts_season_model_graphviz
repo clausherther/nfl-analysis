@@ -1,6 +1,6 @@
 digraph {
-	phi [label="phi ~ Beta"]
 	kappa_log [label="kappa_log ~ Exponential"]
+	phi [label="phi ~ Beta"]
 	kappa [label="kappa ~ Deterministic" shape=box]
 	subgraph cluster11 {
 		theta [label="theta ~ Beta"]
