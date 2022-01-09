@@ -1,12 +1,20 @@
 digraph {
-	"α" [label="α ~ Normal"]
-	"β" [label="β ~ Normal"]
-	"σ" [label="σ ~ HalfNormal"]
+	"α" [label="α
+~
+Normal"]
+	"σ" [label="σ
+~
+HalfNormal"]
+	"β" [label="β
+~
+Normal"]
 	subgraph cluster17 {
-		y_attempt_ratio [label="y_attempt_ratio ~ Normal" style=filled]
+		y_attempt_ratio [label="y_attempt_ratio
+~
+Normal" style=filled]
 		label=17 labeljust=r labelloc=b style=rounded
 	}
-	"β" -> y_attempt_ratio
 	"α" -> y_attempt_ratio
 	"σ" -> y_attempt_ratio
+	"β" -> y_attempt_ratio
 }

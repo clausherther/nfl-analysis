@@ -1,17 +1,35 @@
 digraph {
-	phi [label="phi ~ Beta"]
-	kappa_log [label="kappa_log ~ Exponential"]
-	kappa [label="kappa ~ Deterministic" shape=box]
-	subgraph cluster32 {
-		theta [label="theta ~ Beta"]
-		label=32 labeljust=r labelloc=b style=rounded
-	}
 	subgraph "cluster5,438" {
-		y [label="y ~ Poisson" style=filled]
+		y_obs [label="y_obs
+~
+Data" shape=box style="rounded, filled"]
+		X_obs [label="X_obs
+~
+Data" shape=box style="rounded, filled"]
+		y [label="y
+~
+Poisson" style=filled]
 		label="5,438" labeljust=r labelloc=b style=rounded
 	}
+	kappa_log [label="kappa_log
+~
+Exponential"]
+	kappa [label="kappa
+~
+Deterministic" shape=box]
+	phi [label="phi
+~
+Beta"]
+	subgraph cluster32 {
+		theta [label="theta
+~
+Beta"]
+		label=32 labeljust=r labelloc=b style=rounded
+	}
+	y -> y_obs
 	kappa_log -> kappa
-	phi -> theta
 	kappa -> theta
+	phi -> theta
 	theta -> y
+	X_obs -> y
 }
